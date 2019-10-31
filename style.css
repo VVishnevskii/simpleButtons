@@ -1,0 +1,176 @@
+
+button {
+  list-style: none;
+  border: none;
+}
+
+.button {
+  position: relative;
+  width: 50px;
+  height: 60px;
+  overflow: hidden;
+  background-color: #000000;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button span {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: red;
+  content: "";
+}
+
+.button span::before,
+.button span::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: red;
+  content: "";
+}
+
+.button span::before {
+  top: -20px;
+}
+
+.button span::after {
+  top: 20px;
+}
+
+
+/*Первая кнопка*/
+.button_1 span {
+  transition: transform 0.3s;
+}
+ 
+/* active */
+.button_1.active_1 {
+  background-color: grey;
+}
+ 
+.button_1.active_1 span {
+  transform: rotate(90deg);
+}
+
+
+/*Вторая кнопка*/
+.button_2 span::before,
+.button_2 span::after {
+  transition-duration: 0.2s, 0.2s;
+}
+ 
+.button_2 span::before {
+  transition-property: top, transform;
+}
+ 
+.button_2 span::after {
+  transition-property: top, transform;
+}
+ 
+/* active */
+.button_2.active_2 {
+  background-color: darkmagenta;
+}
+ 
+.button_2.active_2 span {
+  background: none;
+}
+ 
+.button_2.active_2 span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+ 
+.button_2.active_2 span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+ 
+.button_2.active_2 span::before,
+.button_2.active_2 span::after {
+  transition-delay: 0s, 0.2s;
+}
+
+
+/*Третья кнопка*/
+.button_3 span {
+  transition: transform 0.3s;
+}
+ 
+.button_3 span::before {
+  transform-origin: top right;
+  transition: transform 0.3s, width 0.3s, top 0.3s;
+}
+ 
+.button_3 span::after {
+  transform-origin: bottom right;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s;
+}
+ 
+/* active */
+.button_3.active_3 {
+  background-color: aqua;
+}
+ 
+.button_3.active_3 span {
+  transform: rotate(-180deg);
+}
+ 
+.button_3.active_3 span::before,
+.button_3.active_3 span::after {
+  width: 50%;
+}
+ 
+.button_3.active_3 span::before {
+  top: 0;
+  transform: translateX(27px) translateY(3px) rotate(45deg);
+}
+
+.button_3.active_3 span::after {
+  top: 0;
+  transform: translateX(27px) translateY(-3px) rotate(-45deg);
+}
+
+/*четвертая кнопка*/
+.button_4 span {
+  transition: transform 0.3s;
+}
+ 
+.button_4 span::before {
+  transform-origin: top right;
+  transition: transform 0.3s, width 0.3s, top 0.3s;
+}
+ 
+.button_4 span::after {
+  transform-origin: bottom right;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s;
+}
+ 
+/* active */
+.button_4.active_4 {
+  background-color: darkgoldenrod;
+}
+ 
+.button_4.active_4 span {
+  transform: rotate(180deg);
+}
+ 
+.button_4.active_4 span::before,
+.button_4.active_4 span::after {
+  width: 50%;
+}
+ 
+.button_4.active_4 span::before {
+  top: 0;
+  transform: translateX(-21px) translateY(6px) rotate(135deg);
+}
+
+.button_4.active_4 span::after {
+  top: 0;
+  transform: translateX(-21px) translateY(-6px) rotate(-135deg);
+}
